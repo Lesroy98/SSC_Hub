@@ -32,7 +32,7 @@
 	  resize: none;
 	   }
 	   
-	   input[type=text], select, #BugDescription {
+	   input[type=text], input[type=email], select, #BugDescription, #UserEmail {
 	   padding: 10px 10px;
     margin: 8px 0;
     display: block;
@@ -81,11 +81,13 @@ left: 25%;
 		<h3>Please enter details regarding the problems your facing with the SSC Hub below</h3
 		
         <form action="/action_page.php">
-            <h4 id="BugSummaryTitle" placeholder = "Bug Summary...">Bug Summary:</h4> 
-	<input type="text" size="65" maxlength="64" value="" name="EMAIL" >
+		<h4 id="UserEmailTitle">Email:</h4> 
+	<input type="email" size="69" maxlength="70" value="" name="EMAIL" placeholder = "Email Address" >
+            <h4 id="BugSummaryTitle">Bug Summary:</h4> 
+	<input type="text" size="69" maxlength="70" value="" name="EMAIL" placeholder = "Bug Summary">
 	<div id ="BugDescriptionContainer">
 	<h4 id = "BugDescriptionHeading">Description:<h4>
-       <textarea rows="20" cols="70" id ="BugDescription" placeholder = "Description of bug...">
+       <textarea rows="20" cols="70" id ="BugDescription" placeholder = "Description of bug">
         </textarea>
 		</div>
 		<div id = "ConfirmationOptions">

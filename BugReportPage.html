@@ -7,7 +7,9 @@
     overflow: hidden;
     background-color: #333;
     position: fixed;
+	top: 0px;
     width: 100%;
+	 z-index: 9999;
        }
 
     .navbar a {
@@ -29,7 +31,7 @@
 	  resize: none;
 	   }
 	   
-	   input[type=text], select {
+	   input[type=text], select, #BugDescription {
 	   padding: 10px 10px;
     margin: 8px 0;
     display: block;
@@ -39,8 +41,17 @@
 }
 
 div#Container {
-background-color: #f2f2f2
+background-color: #f2f2f2;
+Position: relative;
+top: 30px;
 }
+
+#FormBody, h1 {
+position: relative;
+left: 25%;
+}
+
+
 	   
        </style>
     <div class="navbar">
@@ -65,7 +76,9 @@ background-color: #f2f2f2
     <body>
         <div id = "Container">
         <h1>Bug Report Page</h1>
-        <h3>Please enter details regarding the problems your facing with the SSC Hub below</h3>
+        <div id = "FormBody">
+		<h3>Please enter details regarding the problems your facing with the SSC Hub below</h3
+		
         <form action="/action_page.php">
             <h4 id="BugSummaryTitle" placeholder = "Bug Summary...">Bug Summary:</h4> 
 	<input type="text" size="65" maxlength="64" value="" name="EMAIL" >
@@ -77,6 +90,7 @@ background-color: #f2f2f2
 		<div id = "ConfirmationOptions">
  <input type="submit" value="Submit">
 <button><a href="#">Cancel</a></button>
+</div>
 </div>
  </form>
         <ul>

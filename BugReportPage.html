@@ -67,6 +67,13 @@ left: 25%;
     <!–– The lines above are the CSS & HTML to create the banner on the top of the form -->
     
     <head>
+	<script language = "javascript">
+	function sendMail()
+{
+    var body = document.getElementById("contact_message").value;
+    window.location.href = "mailto:mail@example.org?subject=Mail request&body="+body;
+}
+	</script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Bug Report Page</title>
@@ -75,32 +82,70 @@ left: 25%;
     </head>
      <!–– The lines above create the URL for the webpage -->
     
-    <body>
+	<script>
+    function generateEmail() {
+  var emailTo = $("#teamName").val();
+  var emailCC = $("#CC").val();
+  var emailSubject = "Issue: " + $("#issue").val() + $("#issue").val();
+  var emailBody = "BugDescription: %0A " + $("#contactInformation").val();
+  location.href = "mailto:" + emailTo + "?" + 
+    (emailCC ? "cc=" + emailCC : "") + 
+    (emailSubject ? "subject=" + emailSubject : "") + 
+    (emailBody ? "&body=" + emailBody : "");
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<h1>Team</h1>
+<select id="teamName">
+	<option value="a@a.com">Team A</option>
+	<option value="b@b.com">Team B</option>
+	<option value="c@c.com">Team C</option>
+</select><br><br>
+
+<h1>Bug Title:</h1>
+<input type="text" id="issue" size="69" maxlength="70" placeholder = "Bug Summary" ><br><br>
+<h1>Ticket Number</h1>
+<input type="text" id="ticketNumber"><br><br>
+<h1>Customer contact info</h1>
+<input type="textarea" id="contactInformation"><br><br>
+<h1>Requested action</h1>
+<input type="radio" name="requestedAction" class="requestedAction" value="Expedite service" id="reqActExpediteService" checked>Expedite service<br>
+<input type="radio" name="requestedAction" class="requestedAction" value="Callback" id="reqActCallback">Callback<br><br>
+
+	
+     
         <div id = "Container">
         <h1>Bug Report Page</h1>
         <div id = "FormBody">
 		<h3>Please enter details regarding the problems your facing with the SSC Hub below</h3
 		
-        <form action="/action_page.php">
+	
+		
+       
+		 <form>
 		<h4 id="UserEmailTitle">Email:</h4> 
-	<input type="email" size="69" maxlength="70" value="" name="EMAIL" placeholder = "Email Address" >
+	<input type="email" size="69" maxlength="70" value="" name="email" placeholder = "Email Address" >
             <h4 id="BugSummaryTitle">Bug Summary:</h4> 
-	<input type="text" size="69" maxlength="70" value="" name="EMAIL" placeholder = "Bug Summary">
+	<input type="text" size="69" maxlength="70" id = "issue"  placeholder = "Bug Summary">
 	<div id ="BugDescriptionContainer">
 	<h4 id = "BugDescriptionHeading">Description:<h4>
-       <textarea rows="20" cols="70" id ="BugDescription" placeholder = "Description of bug">
+       <textarea rows="20" cols="70" id ="BugDescription" placeholder = "Description of bug" name = "comment">
         </textarea>
 		</div>
 		<div id = "ConfirmationOptions">
- <input type="submit" value="Submit">
+ <input type="submit" value="Generate email" onclick="generateEmail()">
 <button><a href="#">Cancel</a></button>
 </div>
 </div>
- </form>
+ </form> 
+  
         <ul>
             <li><a href="http://Home">Home</a></li>
             <li><a href="http://About">About</a></li>
         </ul>
          </div>
     </body>
+	
+	
 </html>

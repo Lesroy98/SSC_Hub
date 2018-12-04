@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
    <style>
        body {margin:0;
 	   background-color: #f2f2f2; } 
@@ -53,35 +54,19 @@ position: relative;
 left: 25%;
 }
 
-
-	   
+#BugDescription{
+font-family: Helvetica;}   
        </style>
-    <div class="navbar">
-        <a href="#SSCHub">Test SSC Hub</a>
-        <a href="OrganiseEvent">Organise an Event</a>
-        <a href="#Events">Events</a>
-        <a href="#Organisers">Organisers</a>
-        <a href="#FAQ">FAQ</a>
-        <a href="#Contact">Contact</a>
-    </div>
-    <!–– The lines above are the CSS & HTML to create the banner on the top of the form -->
+   
     
-    <head>
-	<script language = "javascript">
-	function sendMail()
-{
-    var body = document.getElementById("contact_message").value;
-    window.location.href = "mailto:mail@example.org?subject=Mail request&body="+body;
-}
 	</script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Bug Report Page</title>
         <meta name="description" content="A page to report problems with the website.">
-        <link rel="stylesheet" href="main.css">
-    </head>
-     <!–– The lines above create the URL for the webpage -->
-    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="main.css">
+        
 	<script>
     function generateEmail() {
   var emailTo = $("#test").val();
@@ -96,6 +81,18 @@ left: 25%;
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+ <div class="navbar">
+        <a href="#SSCHub">Test SSC Hub</a>
+        <a href="OrganiseEvent">Organise an Event</a>
+        <a href="#Events">Events</a>
+        <a href="#Organisers">Organisers</a>
+        <a href="#FAQ">FAQ</a>
+        <a href="#Contact">Contact</a>
+    </div>
 <div id = "Container">
 <h1>Bug Report Page</h1>
  <input type= "hidden" id="test" value="BugFixers@outlook.com">
@@ -108,7 +105,7 @@ left: 25%;
 <textarea rows="20" cols="70" id="BugDescription" placeholder = "Description of bug"></textarea>
 		</div>
 		<div id = "ConfirmationOptions">
- <input type="submit" value="Send Bug" onclick="generateEmail()">
+ <input type="button" value="Send Bug" onclick="generateEmail()">
 <button><a href="#">Cancel</a></button>
 </div>
         <ul>

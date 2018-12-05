@@ -3,7 +3,7 @@
 <head>
    <style>
        body {margin:0;
-	   background-color: #f2f2f2; } 
+	    } 
 
     .navbar {
     overflow: hidden;
@@ -43,15 +43,27 @@
     box-sizing: border-box;
 }
 
-div#Container {
-background-color: #f2f2f2;
+div#FormContainer {
+background: #f2f2f2;
 Position: relative;
 top: 30px;
+left:25px;
+padding-top: 5px;
+width: 60%;
 }
 
-#FormBody, h1 {
+ h1 {
 position: relative;
 left: 25%;
+}
+
+#FormDetails{
+position: relative;
+left: 10%;
+}
+#Container{
+position: relative;
+top: 30px;
 }
 
 #BugDescription{
@@ -97,7 +109,10 @@ font-family: Helvetica;}
 <h1>Bug Report Page</h1>
  <input type= "hidden" id="test" value="lesroy.wedderburn@cgi.com">
 
+ <div id = "FormContainer">
+ <div id ="FormDetails">
 <h3>Please enter details regarding the problems your facing with the SSC Hub below</h3>
+
 <h4 id="BugSummaryTitle">Bug Summary</h4>
 <input type="text" id="issue" size="69" maxlength="70">
 <div id ="BugDescriptionContainer">
@@ -108,7 +123,8 @@ font-family: Helvetica;}
  <input type="button" value="Submit bug" onclick="generateEmail()">
 <a href="http://stackoverflow.com"><input type="button" value="Cancel"></a>
 </div>
-       <div>
+</div>
+      
         <ul>
             <li><a href="http://Home">Home</a></li>
             <li><a href="http://About">About</a></li>

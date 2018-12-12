@@ -83,8 +83,8 @@ font-family: Helvetica;}
     function generateEmail() {
   var emailTo = $("#test").val();
   var emailCC = $("#CC").val();
-  var emailSubject = "Bug Reported - " + $("#issue").val() + $("#issue").val();
-  var emailBody = "Bug Issue: " + $("#issue").val() + "%0A%0A"  + "Bug Description: %0A" + $("#BugDescription").val();
+  var emailSubject = "Bug Reported - " + $("#issue").val();
+  var emailBody = "Bug Issue: %0A" + $("#issue").val() + "%0A%0A"  + "Bug Description: %0A" + $("#BugDescription").val();
   location.href = "mailto:" + emailTo + "?" + 
     (emailCC ? "cc=" + emailCC : "") + 
     (emailSubject ? "subject=" + emailSubject : "") + 
@@ -120,7 +120,7 @@ font-family: Helvetica;}
 <textarea rows="20" cols="70" id="BugDescription"></textarea>
 		</div>
 		<div id = "ConfirmationOptions">
- <input type="button" value="Submit bug" onclick="generateEmail()">
+ <input type="button" class="btn btn-primary btn-lg" value="Submit bug" onclick="generateEmail()">
 <a href="http://stackoverflow.com"><input type="button" value="Cancel"></a>
 </div>
 </div>

@@ -24,40 +24,7 @@
     background: #ddd;
     color: black;
        }
-       </style>
-    <div class="navbar">
-        <a href="#SSCHub">SSC Hub</a>
-        <a href="OrganiseEvent">Organise an Event</a>
-        <a href="#Events">Events</a>
-        <a href="#Organisers">Organisers</a>
-        <a href="#FAQ">FAQ</a>
-        <a href="#Contact">Contact</a>
-    </div>
-    <!–– The lines above are the CSS & HTML to create the banner on the top of the form -->
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bug Report Page</title>
-        <meta name="description" content="A page to report problems with the website.">
-        <link rel="stylesheet" href="main.css">
-    </head>
-     <!–– The lines above create the URL for the webpage -->
-    
-    <body>
-        
-        <h1>Event Review Page</h1>
-        <h3>Please enter any feedback from the Christams Luch event</h3>
-
-        <input type="submit" value="Submit">
-       <textarea rows="20" cols="70">
-        </textarea>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Font Awesome Icon Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-* {
+	   * {
     box-sizing: border-box;
 }
 
@@ -130,10 +97,40 @@ body {
         display: none;
     }
 }
-</style>
+       </style>
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bug Report Page</title>
+        <meta name="description" content="A page to report problems with the website.">
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
+	<div class="navbar">
+        <a href="#SSCHub">SSC Hub</a>
+        <a href="OrganiseEvent">Organise an Event</a>
+        <a href="#Events">Events</a>
+        <a href="#Organisers">Organisers</a>
+        <a href="#FAQ">FAQ</a>
+        <a href="#Contact">Contact</a>
+    </div>
+		
+        <h1>Event Review Page</h1>
+        <h3>Please enter any feedback from the Christams Luch event</h3>
+
+       <div id ="CommentSection">
+       <textarea rows="20" cols="70">
+        </textarea>
+		</div>
+				 
+<div id = "UserRatingSystem">
 <span class="heading">User Rating</span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
@@ -200,11 +197,15 @@ body {
     <div>20</div>
   </div>
 </div>
-        
+<div id = "SubmitButton">
+		 <input type="submit" value="Submit">
+		 </div>
+        </div>
+		<div id = "bottomSectionContainer">
         <ul>
             <li><a href="http://Home">Home</a></li>
             <li><a href="http://About">About </a></li>
         </ul>
-        
+        </div>
     </body>
 </html>

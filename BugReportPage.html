@@ -224,6 +224,18 @@ ga('create', 'UA-78016541-1', 'auto');
 ga('send', 'pageview');
 
 </script>
+<script>
+    function generateEmail() {
+  var emailTo = $("#test").val();
+  var emailCC = $("#CC").val();
+  var emailSubject = "Bug Reported - " + $("#issue").val();
+  var emailBody = "Bug Issue: %0A" + $("#issue").val() + "%0A%0A"  + "Bug Description: %0A" + $("#BugDescription").val();
+  location.href = "mailto:" + emailTo + "?" + 
+    (emailCC ? "cc=" + emailCC : "") + 
+    (emailSubject ? "subject=" + emailSubject : "") + 
+    (emailBody ? "&body=" + emailBody : "");
+}
+</script>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">

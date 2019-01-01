@@ -1,9 +1,9 @@
 <?php
 include 'db_connection.php';
-$user_feedback = filter_input(INPUT_POST, 'comments');
-$rating = filter_input(INPUT_POST, 'rating');
+
 $conn = OpenCon();
- 
+$user_feedback = mysqli_real_escape_string($conn, $_POST['comments']);
+$rating = filter_input(INPUT_POST, 'rating');
 echo "Connected Successfully";
  
 

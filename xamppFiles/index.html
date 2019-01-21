@@ -241,6 +241,10 @@ body {
     width: 70%;
 }
 
+textarea {
+resize: none;
+}
+
 /* Place text to the right */
 .right {
     text-align: right;
@@ -334,13 +338,12 @@ ga('send', 'pageview');
         <h3>Please enter any feedback from the Christams Lunch event</h3>
 <form method="post" action="connectionToDB.php">
        <div id ="CommentSection" >
-       <textarea name="comments" input type ="text" rows="20" cols="70">
-        </textarea>
+       <textarea name="comments" input type ="text" rows="20" cols="70" required></textarea>
 		</div>
 				 
 <div id = "UserRatingSystem">
 <span class="heading">User Rating</span>
-<select name="rating" size="5">
+<select name="rating" size="5" required>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -349,6 +352,9 @@ ga('send', 'pageview');
 </select>
 <div id = "SubmitButton">
 		 <input type="submit" value="Submit">
+		 <?php
+		 "include/redirect.php";
+		 ?>
 		 </div>
         </div>
 		</form>

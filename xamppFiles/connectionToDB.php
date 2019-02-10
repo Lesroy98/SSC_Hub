@@ -12,6 +12,7 @@ $sql = "INSERT INTO event_rating (event_id, event_name, user_feedback, rating, u
 VALUES ( 2, 'Life','$user_feedback', $rating , 'john@example.com')";
 
 if ($conn->query($sql) === TRUE) {
+	header("Location:https://www.google.com");
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

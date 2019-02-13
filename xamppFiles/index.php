@@ -363,7 +363,15 @@ ga('send', 'pageview');
 <?php
 
 if($row == 1){
+	
+	while($row=mysqli_fetch_assoc($result))
+	{
 ?>
+	<p> You gave this event a rating of:
+   <p>  <?php echo $row['rating'];?> <p>
+   <p> The feedback you provided on this event was: </p>
+   <p> <?php echo $row['user_feedback'];?> </p>
+	<?php } ?>
 <h1> YOU HAVE ALREADY RATED THIS EVENT </h1>
 <?php
 } else {

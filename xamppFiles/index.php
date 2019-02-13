@@ -362,11 +362,11 @@ ga('send', 'pageview');
 
 <?php
 
-if($row > 0){
+if($row == 1){
 ?>
 <h1> YOU HAVE ALREADY RATED THIS EVENT </h1>
 <?php
-} 
+} else {
 ?>
 
  <p> <?php echo $row;?> </p>
@@ -398,6 +398,7 @@ if($row > 0){
 		 </div>
         </div>
 		</form>
+<?php } ?>
         <ul>
             <li><a href="http://Home">Home</a></li>
             <li><a href="http://About">About</a></li>

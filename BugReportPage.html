@@ -174,7 +174,7 @@
          #FormDetails{
          padding: 0px 0px 0px 0px;
          margin: 0px;
-         
+         border-style: ;
          }
          .request-place-deadline-passed .glyphicon-time {
          font-size: 42px;
@@ -195,7 +195,7 @@
            var emailTo = $("#test").val();
            var emailCC = $("#CC").val();
            var emailSubject = "Bug Reported - ";
-           var emailBody = "Bug Issue: %0A" + "%0A%0A"  + "Bug Description: %0A";
+           var emailBody = "Page of bug occurrence: %0A%0A"  + "Bug Description/Issue: %0A%0A%0A" + "Kind Regards,";
            location.href = "mailto:" + emailTo + "?" + 
              (emailCC ? "cc=" + emailCC : "") + 
              (emailSubject ? "subject=" + emailSubject : "") + 
@@ -263,23 +263,22 @@
                     </form>
             		-->
          <input type= "hidden" id="test" value="lesroy.wedderburn@.com">
-		 <h1> Bug Reporting Page</h1>
+		 <h1> Bug Reporting</h1>
          <div id = "FormContainer">
 		   <div id ="FormDetails">
-            <h3><Span>Please enter details regarding the problems your facing with the SSC Hub below</span></h3>
-            
-          
+                     
                <div id = "ConfirmationOptions">
-			    <h4><span>To report a bug follow the following steps:</span></h4>
+			    <h4><span>Follow these steps to report a bug within the SSC Hub:</span></h4>
             <ol>
-			<li>Provide a Summary of the bug within the subject line of the email</li>
-			<li>Provide the web page that the bug occurred on.</li>
-			<li> Provide a description/steps of how the bug occurred.</li>
+			<li>Click the submit bug button.</li>
+			<li>Provide a summary of the bug within the subject line.</li>
+			<li>Details of which web page that the bug occurred on.</li>
+			<li>Finally, provide a description of how the bug occurred.</li>
 			
 			
             </ol>
-			<p><Span>Attach any additional screenshots or content within the email to provide a better understanding of the bug.
-			You issue will be attended to by the SSCHub team to remove/reduce this problem.</span></p>
+			<p><Span>Additional, attach any screenshots or content relating to the bug that maybe of help.
+			You issue will be attended to by the SSC Hub team to resolve this problem.</span></p>
                   <input type="button" class="btn btn-primary btn-lg" value="Submit bug" onclick="generateEmail()">
                   <a class="btn btn-danger" href="http://www.google.com" role="button">Cancel</a>
                </div>

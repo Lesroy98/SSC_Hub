@@ -1,0 +1,15 @@
+- Possibly having 3 user stories per PR
+- Making sure code meets requirements before potential merge
+- Define what the feature should achieve and if the PR meets that
+- Specific testing routes (Manual Testing routes)
+	E.g I want you to go to the action controller --> action status controller
+- Need to make PR quick and efficent
+- Use of Artifacts(Issues) Catergorically doing it by the book (Does it do what it needs to do)
+- Nick - Not sure about mini branches
+	Rob - not wanting one branch for multiple issues
+- Removing of material assest maybe
+- More practices/reviewing to improve code maintainability/quality
+	- Stick to more solid process for reviewing 
+	- Looking at PR at a specific time (3pm)
+
+

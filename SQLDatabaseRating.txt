@@ -10,3 +10,5 @@ CREATE TABLE `event_rating` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 Additonal Column to be added to a table or query to return Average rating for events
+Would require connections to the actual events table: Alter the events table to have a new column called average rating
+allows for it to be displayed for users.

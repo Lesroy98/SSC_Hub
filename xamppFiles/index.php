@@ -56,6 +56,12 @@ body {
     padding-top: 50px;
 }
 
+#RatingContainer {
+	background-color: #f1f1f1;
+	border-radius: 25px;
+	padding: 0px 3px 6px 20px;
+}
+
 .event-status-summary{
     margin: 6px 0 0 0;
     border-bottom: 1px solid #dcdcdc;
@@ -308,6 +314,7 @@ resize: none;
     }
 }
 
+
 </style>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -359,7 +366,7 @@ ga('send', 'pageview');
     <div class="col-md-8">
   
 <div id = "Container">
-
+<div id = "RatingContainer">
 <?php
 
 if($row == 1){
@@ -367,12 +374,12 @@ if($row == 1){
 	while($row=mysqli_fetch_assoc($result))
 	{
 ?>
-	<p> You gave this event a rating of:
-   <p>  <?php echo $row['rating'];?> <p>
-   <p> The feedback you provided on this event was: </p>
+	<h3> You have already rated this event. The details of your review are as follows: </h3>
+	<h4> Rating score: </h4>
+   <p>  <?php echo $row['rating'];?>/5 <p>
+   <h4> The feedback you provided on this event was: </h4>
    <p> <?php echo $row['user_feedback'];?> </p>
 	<?php } ?>
-<h1> YOU HAVE ALREADY RATED THIS EVENT </h1>
 <?php
 } else {
 ?>
@@ -407,6 +414,7 @@ if($row == 1){
         </div>
 		</form>
 <?php } ?>
+</div>
         <ul>
             <li><a href="http://Home">Home</a></li>
             <li><a href="http://About">About</a></li>
@@ -460,252 +468,3 @@ if($row == 1){
  <script src="/assets/js/ssc.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-
-
-<!DOCTYPE html>
-<html>
-   <style>
-       body {margin:0;} 
-
-    .navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    width: 100%;
-       }
-
-    .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-       }
-
-    .navbar a:hover {
-    background: #ddd;
-    color: black;
-       }
-	   * {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial;
-    margin: 0 auto; /* Center website */
-    max-width: 800px; /* Max width */
-    padding: 20px;
-}
-
-.heading {
-    font-size: 25px;
-    margin-right: 25px;
-}
-
-.fa {
-    font-size: 25px;
-}
-
-.checked {
-    color: orange;
-}
-
-/* Three column layout */
-.side {
-    float: left;
-    width: 15%;
-    margin-top:10px;
-}
-
-.middle {
-    margin-top:10px;
-    float: left;
-    width: 70%;
-}
-
-/* Place text to the right */
-.right {
-    text-align: right;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* The bar container */
-.bar-container {
-    width: 100%;
-    background-color: #f1f1f1;
-    text-align: center;
-    color: white;
-}
-
-/* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
-.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
-.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
-.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
-.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
-
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-    .side, .middle {
-        width: 100%;
-    }
-    .right {
-        display: none;
-    }
-}
-       </style>
-    
-    
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bug Report Page</title>
-        <meta name="description" content="A page to report problems with the website.">
-        <link rel="stylesheet" href="main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Font Awesome Icon Library --
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-
-	<div class="navbar">
-        <a href="#SSCHub">SSC Hub</a>
-        <a href="OrganiseEvent">Organise an Event</a>
-        <a href="#Events">Events</a>
-        <a href="#Organisers">Organisers</a>
-        <a href="#FAQ">FAQ</a>
-        <a href="#Contact">Contact</a>
-    </div>
-		
-        <h1>Event Review Page</h1>
-        <h3>Please enter any feedback from the Christams Lunch event</h3>
-
-       <div id ="CommentSection">
-       <textarea rows="20" cols="70">
-        </textarea>
-		</div>
-				 
-<div id = "UserRatingSystem">
-<span class="heading">User Rating</span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<p>4.1 average based on 254 reviews.</p>
-<hr style="border:3px solid #f1f1f1">
-
-<div class="row">
-  <div class="side">
-    <div>5 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-5"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>150</div>
-  </div>
-  <div class="side">
-    <div>4 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-4"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>63</div>
-  </div>
-  <div class="side">
-    <div>3 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-3"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>15</div>
-  </div>
-  <div class="side">
-    <div>2 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-2"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>6</div>
-  </div>
-  <div class="side">
-    <div>1 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-1"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>20</div>
-  </div>
-</div>
-<div id = "SubmitButton">
-		 <input type="submit" value="Submit">
-		 </div>
-        </div>
-		<div id = "bottomSectionContainer">
-        <ul>
-            <li><a href="http://Home">Home</a></li>
-            <li><a href="http://About">About </a></li>
-        </ul>
-        </div>
-    </body>
-</html> -->

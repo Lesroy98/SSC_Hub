@@ -8,7 +8,6 @@ mysqli_query($conn, $query) or die('Error querying database.');
 
 $result = mysqli_query($conn, $query);
 
-
 while ($row = mysqli_fetch_array($result) ) {
  echo $row['event_id'] . ' ' . $row['user_feedback'] . ': ' . $row['rating'] . ' ' . $row['user_email'] .'<br />';
 

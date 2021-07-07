@@ -1,0 +1,14 @@
+SQL Database table:
+
+CREATE TABLE `event_rating` (
+  `id` int(11) AUTO-INNCREMENT,
+  `user_email` Varchar(32) NOT NULL,
+  `name` int(11) NOT NULL,
+  `event_ID` int(11) NOT NULL,
+  `rating` int(1) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+Additonal Column to be added to a table or query to return Average rating for events
+Would require connections to the actual events table: Alter the events table to have a new column called average rating
+allows for it to be displayed for users.
